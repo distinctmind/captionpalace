@@ -43,13 +43,13 @@ function App() {
           <path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/>
         </svg>
       </button>
-      <div style={{height: 1000, display: 'flex', flexDirection: 'column'}}>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
           <h1 className={theme === 'light' ? 'lightText' : 'darkText'}>Create Art</h1>
         <textarea ref={textAreaRef} defaultValue={''} id='caption' className={theme === 'light' ? 'light' : 'dark'} rows={10} cols={44} onChange={updateTextArea}>
         </textarea>
         <div style={{position: 'relative', margin: 30}}>
-          <span style={{position: 'absolute', left: 5}} className={theme === 'light' ? 'lightText' : 'darkText'}>{2200 - characterCount} remaining</span>
-          <span style={{position: 'absolute', right: 5}} className={theme === 'light' ? 'lightText' : 'darkText'}>#{30 - hashtagCount} remaining</span>
+          <span style={{position: 'absolute', left: 5}} className={theme === 'light' ? 'lightText' : 'darkText'}>{characterCount}/2200 </span>
+          <span style={{position: 'absolute', right: 5}} className={theme === 'light' ? 'lightText' : 'darkText'}>#{hashtagCount}/30</span>
         </div>
         <button className={theme === 'light' ? 'light' : 'dark'} onClick={copyText}>
           Copy to Clipboard
