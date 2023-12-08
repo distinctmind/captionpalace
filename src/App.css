@@ -12,6 +12,20 @@ button {
   margin: 20px;
 }
 
+.neon:hover {
+  color: #255784;
+  background: #42aaff;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  border-width: 0;
+  transition-delay: 1s;
+}
+
+.neon {
+  color: white !important;
+  font-weight: 600;
+  border-color: #42aaff !important;
+}
+
 .dark {
   background-color: #111111;
   color: white;
@@ -23,6 +37,35 @@ button {
   color: black;
   border-color: #111111;
 }
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  left: 1em;
+  color: white;
+  border: 2px solid white;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.light-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  left: 1em;
+  color: black;
+  border: 2px solid #111111;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
 .lightText {
   color: black;
 }
@@ -30,39 +73,9 @@ button {
 .darkText {
   color: white;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+textarea {
+  border-width: 0;
+  outline-width: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
