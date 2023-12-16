@@ -20,7 +20,7 @@ button {
 
 .buttonContainer {
   position: relative;
-  width: 500px;
+  max-width: 500px;
   height: 45px;
 }
 
@@ -61,14 +61,14 @@ button {
 .theme-toggle {
   position: absolute;
   z-index: 100;
-  top: 1em;
-  left: 1em;
+  top: 0;
+  left: 0;
   padding: 4px;
   background: transparent;
   cursor: pointer;
   border-radius: 5px;
-  width: 69px;
-  height: 69px;
+  width: 55px;
+  height: 55px;
 }
 textarea {
   background: transparent;
