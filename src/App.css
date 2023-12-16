@@ -9,7 +9,7 @@
 }
 
 button {
-  margin: 20px;
+  /* margin: 20px; */
   background: transparent;
 }
 
@@ -61,8 +61,8 @@ button {
 .theme-toggle {
   position: absolute;
   z-index: 100;
-  top: 0;
-  left: 0;
+  top: 1em;
+  left: 1em;
   padding: 4px;
   background: transparent;
   cursor: pointer;
