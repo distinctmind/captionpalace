@@ -1,5 +1,3 @@
-import Container from "./container";
-
 const NavBar = () => {
     return (
         <div className="border-b">

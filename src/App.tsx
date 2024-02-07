@@ -13,10 +13,6 @@ function App() {
   const [hashtagCount, setHashtagCount] = useState(0);
   const textAreaRef = useRef<any>(null);
 
-  const saveToDrafts = () => {
-
-  }
-
   const copyText = () => {
     document.querySelector('.copySvg')?.classList.add('hide');
     document.querySelector('#successMessage')?.classList.add('show');
