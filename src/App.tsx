@@ -4,6 +4,8 @@ import './App.css'
 import NavBar from './components/navbar.tsx';
 import { useTheme } from './ThemeProvider.tsx';
 
+import blueParticleVideo from './assets/blue_particles.mp4';
+
 
 function App() {
 
@@ -53,6 +55,9 @@ function App() {
 
   return (
     <>
+      <div className='fullscreen-bg'>
+        <video src={blueParticleVideo} loop muted autoPlay className='fullscreen-bg_video' />
+      </div>
       <NavBar />
       <button id="dark-mode-toggle" className={'theme-toggle'} onClick={() => toggleTheme()}>
         {theme === 'light' ? moonIcon() : sunIcon()}
@@ -66,17 +71,12 @@ function App() {
           <span style={{position: 'absolute', right: 5}} className={theme === 'light' ? 'lightText' : 'darkText'}>#{hashtagCount}/30</span>
         </div>
         <div style={{display: 'flex'}}>
-          {/* <div className='buttonContainer'>
-            <button className={theme === 'light' ? 'light' : 'dark'} onClick={saveToDrafts}>
-              Save to Drafts
-            </button>
-          </div> */}
           <div className='buttonContainer'>
-              <button id='successMessage' className={theme === 'light' ? 'light' : 'dark'} onClick={copyText}>
+              <button id='successMessage' className={theme === 'light' ? '#000000' : '#ffffff'} onClick={copyText}>
                 Copied to Clipboard!
               </button>
               <button className={theme === 'light' ? 'light' : 'dark'} onClick={copyText}>
-                <svg className='copySvg' fill="currentColor" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <polygon points="0,190.513 0,229.34 45.298,229.34 45.298,501.125 97.066,501.125 97.066,190.513 "></polygon> </g> </g> <g> <g> <path d="M432.798,125.802L162.912,10.875L147.7,46.598l185.998,79.205H135.893v155.306h297.67V125.802H432.798z M265.314,222.869 h-38.826v-38.826h38.826V222.869z M342.968,222.869h-38.827v-38.826h38.827V222.869z"></path> </g> </g> <g> <g> <polygon points="484.547,267.381 431.993,319.935 135.893,319.935 135.893,501.125 433.563,501.125 433.563,373.273 512,294.835 "></polygon> </g> </g> </g></svg>
+                <svg className='copySvg' fill={theme === 'light' ? '#000000' : '#ffffff'} height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <polygon points="0,190.513 0,229.34 45.298,229.34 45.298,501.125 97.066,501.125 97.066,190.513 "></polygon> </g> </g> <g> <g> <path d="M432.798,125.802L162.912,10.875L147.7,46.598l185.998,79.205H135.893v155.306h297.67V125.802H432.798z M265.314,222.869 h-38.826v-38.826h38.826V222.869z M342.968,222.869h-38.827v-38.826h38.827V222.869z"></path> </g> </g> <g> <g> <polygon points="484.547,267.381 431.993,319.935 135.893,319.935 135.893,501.125 433.563,501.125 433.563,373.273 512,294.835 "></polygon> </g> </g> </g></svg>
               </button>
           </div>
       </div>
